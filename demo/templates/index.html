@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>AJAX テスト</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'js/script.js' %}"></script>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    {% if favorite == True %}
+    <img id="img_favo" src="{% static "img/heart_on.png" %}" onclick="updateFavorite()">
+    {% else %}
+    <img id="img_favo" src="{% static "img/heart_off.png" %}" onclick="updateFavorite()">
+    {% endif %}
+  </body>
+</html>
